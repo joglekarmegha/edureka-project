@@ -15,9 +15,11 @@ RUN apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php
 RUN rm -rf /var/www/html/*
 COPY website /var/www/html/
 
+#ENTRYPOINT ["/usr/sbin/apache2", "-k", "start"]
+
 #Open port 80
 EXPOSE 8080
 
 #Start Apache service
-CMD["apachectl", "-D", "FOREGROUND"]
+CMD apachectl -D FOREGROUND
 EOT
