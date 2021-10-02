@@ -22,4 +22,3 @@ EXPOSE 8080
 
 #Start Apache service
 CMD apachectl -D FOREGROUND
-EOT
