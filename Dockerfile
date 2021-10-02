@@ -19,5 +19,5 @@ COPY website /var/www/html/
 EXPOSE 8080
 
 #Start Apache service
-CMD["apachectl", "-D", "FOREGROUND"]
+CMD ["apachectl", "-D", "FOREGROUND"]
 EOT
